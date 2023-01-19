@@ -2,19 +2,21 @@
 
 # Project Goals
 
- - Identify key drivers of churn. 
- - Predict which customers are at risk of churning
+ - Identify what drives home values 
+ - Build a model to best predict home value
 
 # Project Description
 
-Anytime a business is struggling, they have to revert to the basic questions of business and answer who is the customer and what makes them stay or leave. In this case why does it seem like so many customers are churning. What are key drivers that are turning our customers away? Could it be the services we are providing, our pricing policy, our target market (age of customer, gender, etc.), or other drivers. We will analyze some of the drivers just mentioned to see if we can come up with a model to see what is causing our customers to chun. Once we have ran our models we will make recommendations on how to better retain our customers from churning in the future. 
+We are looking to come up with a machine learning model that will help us see which features gives us the best indicators of price and also be able to predict the price of the home. These homes are located in Southern California within the Orange County, Los Angeles County, and the Ventura County. After we have explored and made our models we will recommend what features are best to help predict price and give usesful insights on our data.
 
 # Initial Questions
 
- 1. Do customers with partners or dependents churn more than those with no dependents or partner?
- 2. Does the type of contract a customer have make it more likley to churn?
- 3. Are customers with different internet service more or less likely to churn?
- 4. Are Senior Citizens more or less likely to churn than non Senior Citizen?
+ 1. Will more bedrooms and bathrooms drive house value up?
+ 2. Does lot size sqft increase home value?
+ 3. Does the month of the transaction of the home affect the price of the home?
+ 4. Are Orange County home values higher vs. Los Angeles and Ventura home values?
+
+
 
 # The Plan
 
@@ -27,21 +29,26 @@ Anytime a business is struggling, they have to revert to the basic questions of 
  - Clean and prepare the data creating a function that will give me data that is ready to be explored upon. Within this step we will also write a function to split our data into train, validate, and test. (prepare.py) 
  
 ### Explore Data
- - Create at least two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, document any findings and takeaways that are observed.
+- Create Vizuals on our data 
+
+- Create at least two hypotheses, set an alpha, run the statistical tests needed, reject or fail to reject the Null Hypothesis, document any findings and takeaways that are observed.
+
+### Feature Engineering:
+ - Scale our data for our models
  
+ - Create dummies to encode categorical variables for our models
+
 ### Model Data 
- - Establish a baseline accuracy
+ - Establish a baseline(mean or median of target variable)
  
- - Create and train four classification models.
+ - Create, Fit, Predict on train subset on four regression models.
  
  - Evaluate models on train and validate datasets.
  
  - Evaluate which model performs the best and on that model use the test data subset.
  
 ### Delivery  
- - Create CSV file with the customer_id, probability of churn, and prediction of churn for each observation in my test dataset.
- 
- - Create a Final Report Notebook to document conclusions, takeaways, and next steps in recommadations for customers churning. Also, inlcude visualizations to help explain why the model that was selected is the best to better help the viewer understand. 
+ - Create a Final Report Notebook to document conclusions, takeaways, and next steps in recommadations for predicitng house values. Also, inlcude visualizations to help explain why the model that was selected is the best to better help the viewer understand. 
 
 
 ## Data Dictionary
@@ -49,7 +56,7 @@ Anytime a business is struggling, they have to revert to the basic questions of 
 
 | Target Variable |     Definition     |
 | --------------- | ------------------ |
-|      Churn      | yes(1) or no(0) customer left |
+|      home_value      | price of the house |
 
 | Feature  | Definition |
 | ------------- | ------------- |
@@ -89,23 +96,23 @@ Anytime a business is struggling, they have to revert to the basic questions of 
 
 ## Takeaways and Conclusions
 
- - Customers who have dependents or partners churned at a much lower rate those those who did not
+ - TBD
   
- - The longer the contract a customer had the less likely they were to churn. With month-to-month having the most churned customers.
+ - TBD
  
- - Customers who have fiber optic internet are more likely to churn compared to other internet customers
+ - TBD
  
- - Non Senior citizens are more likely to churn than senior citizens.
+ - TBD
  
 **Best Model's performance:<br>
-Accuracy of 85.72% on in-sample (train), 85.59% on out-of-sample data (validate) and an accuracy of 86% on the test data.**
+TBD 
 
 ## Recommendations
-- We would want to target those who have dependents or partners to be within our target market. Seeing that customers that have dependents or a partner churn at a lower rate.
+- TBD
 
-- I would recommend promoting longer contracts for our customers, making them more appealing to customers.
+- TBD
 
 ## Next Steps
 
-- Figure out why month to month and fiber optic customers are churning at such a high rate.
+- TBD
 - Consider adding different hyperparameters to models for better results. 
