@@ -32,7 +32,7 @@ def get_zillow_data():
         SELECT yearbuilt, lotsizesquarefeet,logerror, longitude, latitude,
         transactiondate, bathroomcnt, bedroomcnt, fips,
          calculatedfinishedsquarefeet,regionidzip, taxvaluedollarcnt 
-        FROM properties_2017 
+        FROM properties_2017
         JOIN propertylandusetype USING(propertylandusetypeid)
         JOIN predictions_2017 USING(id) 
         WHERE propertylandusedesc = "Single Family Residential" AND predictions_2017.transactiondate LIKE "2017{test}{test}";
@@ -68,6 +68,8 @@ def outlier_remove(df):
     df = df[df.home_value < 2_000_000]
 
     df = df[df.sqft < 10000]
+    
+    df = df[df.lot_sqft < 20000]
 
     return df
     
@@ -80,6 +82,8 @@ def clean_zillow_data(df):
     df = outlier_remove(df)
     
     df.drop_duplicates(inplace=True)
+    
+    #df = df.drop(columns = ['regionidzip'])
 
     df.to_csv("zillow.csv", index=False)
 
@@ -109,10 +113,10 @@ def wrangle_zillow():
 
 
 
-def scaled_data(train, 
+def mvp_scaled_data(train, 
                validate, 
                test, 
-               columns_to_scale=['bedrooms', 'bathrooms', 'sq_ft', 'tax_amount'],
+               columns_to_scale=['long','lat', 'logerror', 'sqft', 'lot_sqft'],
                return_scaler=False):
     '''
     Scales the 3 data splits. 
@@ -144,7 +148,7 @@ def scaled_data(train,
 
 
 # Vizs
-                 
+
                  
 def plot_variable_pairs(df):
     sns.pairplot(data = df.sample(2000), kind='reg', diag_kind='hist')
