@@ -60,29 +60,17 @@ We are looking to come up with a machine learning model that will help us see wh
 
 | Feature  | Definition |
 | ------------- | ------------- |
-| customer_id  | unique id for each customer  |
-| payment_type_id | 1, 2, 3, 4 related to payment type |
-| internet_service_type_id | 1, 2, 3 related to internet service type |
-| contract_type_id | 1, 2, 3 related to contract type |
-| gender | male or female |
-| senior_citizen | yes(1) or no(0) senior citizen |
-| partner | yes or no has a partner | 
-| dependents | yes or no has dependents |
-| tenure | how long the customer has been with company |
-| phone_service | yes or no has phone service |
-| multiple_lines | yes or no has multiple_lines |
-| online_security | yes or no has online security |
-| online_backup | yes or no has online backup |
-| device_protection | yes or no has device protection |
-| tech_support | yes or no has tech support |
-| streaming_tv | yes or no has streaming tv |
-| streaming_movies | yes or no has streaming movies |
-| paperless_billing | yes or no has paperless billing |
-| monthly_charges | monthly charge to customer |
-| total_charges | total charge to customer |
-| contract_type |  month to month, 1 year, 2 month |
-| internet_service_type | Fiber Optic, DSL, None | 
-| payment_type | Electronic check, Mailed check, Bank transfer, Credit card |
+| year_built | The year the house was built  |
+| lot_sqft | The square feet of the lot  |
+| long | The longititude coordinates of the house |
+| lat | The latitude coordinates of the house |
+| transaction_month | The month of the transaction date |
+| bathrooms | Number of bathrooms in the house | 
+| bedrooms | Nummber of bedrooms in the house |
+| fips | Code identifier for county |
+| sqft | Square feet of the property|
+| county | Name of the county the house is located |
+
 
 ## Steps to Reproduce
 
