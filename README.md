@@ -82,25 +82,23 @@ We are looking to come up with a machine learning model that will help us see wh
 
 - Run notebook.
 
-## Takeaways and Conclusions
+## Conclusionss
 
- - TBD
-  
- - TBD
- 
- - TBD
- 
- - TBD
+**Home value predicions were used by minimizing RMSE within our models. County and transaction month have proven to be the most valuable, but there is still room for improvement.**
+
+
  
 **Best Model's performance:<br>
-TBD 
+My best model reduced the root mean squared error by 82500 compared to the baseline results.**
+
+**RMSE 82493.41 on in-sample (train), RMSE 84100.76 on out-of-sample data (validate) and RMSE of 80897.87 on the test data.**
 
 ## Recommendations
-- TBD
+- I would recommend using counties and transaction months to build models to predict home values. 
 
-- TBD
+- I would also recommend collecting more data about the homes. For example, crime rates in the county, average salary within neighborhoods, and school rankings
 
 ## Next Steps
 
-- TBD
-- Consider adding different hyperparameters to models for better results. 
+- I would add more columns/features from the database to see if there are better relationships to help predict price
+- Consider adding different hyperparameters to models for better results.
