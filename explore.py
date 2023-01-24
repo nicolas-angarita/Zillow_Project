@@ -51,13 +51,12 @@ def plot_variable_pairs(df):
     return plt.show()
                  
                  
-def plot_categorical_and_continuous_vars(df, cat, cont, palette = None):
+def plot_categorical_and_continuous_vars(df, cat, cont):
     
     df_sample = df.sample(2000)
     
-    sns.barplot(x=cat, y=cont, data=df_sample, palette = None)
+    sns.barplot(x=cat, y=cont, data=df_sample, color = 'dodgerblue', edgecolor = 'black', alpha = .8)
     plt.title(f'Home Values compared to {cat}')
-    plt.figure()
     
     return plt.show()
                  
