@@ -49,13 +49,13 @@ def clean_zillow_data(df):
     county_map = {6037: 'los angeles', 6111: 'ventura', 6059: 'orange'}
     df['county'] = df['fips'].replace(county_map)
     
-    df['transaction_month'] = df['transaction_month'].str.replace("-", "").astype(float)
+    # df['transaction_month'] = df['transaction_month'].str.replace("-", "").astype(float)
 
-    df['transaction_month']= df['transaction_month'].astype(str).str[4:6].astype(int)
+    # df['transaction_month']= df['transaction_month'].astype(str).str[4:6].astype(int)
     
     df.drop_duplicates(inplace=True)
     
-    df = df.drop(columns = ['regionidzip'])
+    # df = df.drop(columns = ['regionidzip'])
 
     df.to_csv("zillow.csv", index=False)
 
