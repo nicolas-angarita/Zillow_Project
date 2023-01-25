@@ -47,6 +47,7 @@ def clean_zillow_data(df):
     df = outlier_remove(df)
     
     county_map = {6037: 'los angeles', 6111: 'ventura', 6059: 'orange'}
+    
     df['county'] = df['fips'].replace(county_map)
     
     df['transaction_month'] = df['transaction_month'].str.replace("-", "").astype(float)

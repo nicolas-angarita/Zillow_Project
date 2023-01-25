@@ -14,13 +14,12 @@ from scipy import stats
 
 def county_stats_test(train):
     ''' 
-    This function takes in the train dataset and outputs the T-Test results for hypothesis 3
-    in the zillow regression project addressing home value of homes in Orange County against
+    This function takes in the train dataset and outputs the T-Test results for homes in Orange County against
     homes in LA or Ventura.
     '''
     # Create the samples
-    orange_homes = train[train.county == 'orange_county']['home_value']
-    la_ventura_homes = train[(train.county == 'la_county')|(train.county == 'ventura_county')]['home_value']
+    orange_homes = train[train.county == 'orange']['home_value']
+    la_ventura_homes = train[(train.county == 'los angeles')|(train.county == 'ventura')]['home_value']
 
     # Set alpha
     α = 0.05
@@ -28,7 +27,7 @@ def county_stats_test(train):
     # Check for equal variances
     s, pval = stats.levene(orange_homes, la_ventura_homes)
 
-    # Run the two-sample, one-tail T-test.
+    # Run the one-tail T-test.
     # Use the results from checking for equal variances to set equal_var
     t, p = stats.ttest_ind(orange_homes, la_ventura_homes, equal_var=(pval > α))
 
